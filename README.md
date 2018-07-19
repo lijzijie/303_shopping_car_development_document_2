@@ -156,9 +156,9 @@ minipc搭建rikirobot小车环境
 	5、假设前进了0.985才前进了1.0，修改bringup.launch文件
 		roscd rikirobot/launch
 		vim bringup.launch
-修改倒数第三行的“linear_scale”的值，"double"value="0.985"
+	修改倒数第三行的“linear_scale”的值，"double"value="0.985"
 
-	6、
+	6、同理，修改角速度的值，
 
 	
 七、第四章：SLAM构建地图
