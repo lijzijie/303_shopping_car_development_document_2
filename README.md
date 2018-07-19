@@ -77,7 +77,7 @@ minipc搭建rikirobot小车环境
 
 四、第一章：rikirobot小车的网络配置与控制
 
-	1、修改.bashrc文件中的 export ROS_MASTER_URI=http://192.168.43.43:11311 ，ip地址，使虚拟机的节点指向树莓派
+	1、先打开终端，输入：ifconfig 查看树莓派的ip地址，这里以192.168.43.43为例，修改.bashrc文件中的 export ROS_MASTER_URI=http://192.168.43.43:11311 ，ip地址，使虚拟机的节点指向树莓派
 	改完之后，soucre ~/.bashrc 文件
 
 	2、登录过去树莓派：ssh rikirobot@192.168.43.43	输入密码：123456
@@ -150,7 +150,15 @@ minipc搭建rikirobot小车环境
 		strat_test			--开始测试
 
 	。。。。。。。。。。有空再写。。。。。。	
+	
+	4、勾选start_test开始进行测试
+	
+	5、假设前进了0.985才前进了1.0，修改bringup.launch文件
+		roscd rikirobot/launch
+		vim bringup.launch
+修改倒数第三行的“linear_scale”的值，"double"value="0.985"
 
+	6、
 
 	
 七、第四章：SLAM构建地图
